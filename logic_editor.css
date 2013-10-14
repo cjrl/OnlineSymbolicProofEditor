@@ -74,3 +74,8 @@ input {
 .help_segment {
     padding-top: 10px;
 }
+
+#auto_render {
+    padding: 0px;
+    width: 0px;
+}

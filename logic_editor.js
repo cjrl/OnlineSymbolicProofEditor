@@ -24,6 +24,7 @@ function init_ui() {
     document.getElementById("print_button").onclick = print_clicked;
     document.getElementById("clear_button").onclick = clear_clicked;
     document.getElementById("example_button").onclick = example_clicked;
+    document.getElementById("render_button").onclick = render_latex;
     create_input_line(window.line_count++);
     MathJax.Hub.Queue(["Typeset",MathJax.Hub,"help_box"]);
 }
@@ -114,7 +115,9 @@ function print_clicked() {
 }
 
 function key_down(event) {
-    if(event.keyCode == 13)
+    if(event.keyCode == 13 && event.shiftKey) 
+        render_latex();
+    else if(event.keyCode == 13)
         add_new_line();
     else if(event.keyCode == 9 && get_selected_line_number() == window.line_count-1) {
         if(get_selected_line_input_id() == 2) {
@@ -157,7 +160,8 @@ function key_down(event) {
 }
 
 function key_up() {
-    render_latex();
+    if(document.getElementById("auto_render").checked==true)
+        render_latex();
 }
 
 function render_latex() {

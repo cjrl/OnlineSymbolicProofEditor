@@ -21,7 +21,7 @@
                     <div class="help_heading">Key Controls:</div>
                     <div class="help_segment">Pressing ENTER while inside the editor area inserts a new line under the currently selected line.</div>
                     <div class="help_segment">Pressing BACKSPACE while inside the first column of the editor when the first box is empty deletes the current line.</div> 
-                    <div class="help_segment">The ARROW KEYS can be used to move around the editor columns and rows.</div>
+                    <div class="help_segment">The ARROW KEYS can be used to move around the editor columns and rows.</div><div class="help_segment">Pressing SHIFT ENTER renders the LaTeX expression, useful for when auto rendering is off.</div>
                      <div class="help_segment">The TAB key can be used to move from column to column, and on the bottom line can be used to create a new line if it is in the right column.</div>
                      <div class="help_heading">Creating Logic Statements:</div>
                      <div class="help_segment">Although the editor accepts direct LaTeX sequences the purpose of the editor was to speed up the process of creating good looking proofs. So the editor has built in symbols it accepts as short hand. They are as follows: </div>
@@ -48,9 +48,13 @@
                     <button id="save_button">Save</button>
                     <button id="open_button">Open</button>
                     <button id="print_button">Print</button>
-                    <button id="clear_button">Clear All</button>
-                    <button id="example_button">Show Example</button>
                     <input type="file" id="file_location"/>
+                    <div>
+                        <button id="render_button">Render</button>
+                        <button id="clear_button">Clear All</button>
+                        <button id="example_button">Show Example</button>
+                        <label><input id="auto_render" checked="true" type="checkbox">Auto Render (slows down editing)</label>
+                    </div>
                 </div>
                 <div id="input_area" class="clearfix">
                     <div class="align">Statement to be proved: </div>
