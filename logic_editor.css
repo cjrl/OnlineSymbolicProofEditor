@@ -1,0 +1,76 @@
+#body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#content {
+    width: 100%;
+}
+
+#header {
+    font-size: 24pt;
+}
+
+#sub_header {
+    padding-bottom: 15px;
+}
+
+#content #input_area {
+    float: left;
+    width: 500px;
+    height: 200px;
+}
+
+#content #input_area input {
+    border:1px solid gray;
+}
+
+#content #input_area input:focus {
+    border:1px solid #BFEE00;
+}
+
+#content #input_area .number{
+    float: left;
+    width: 25px;
+}
+
+#content #output_area {
+    float: left;
+    width:500px;
+    height: 200px;
+    text-align: left !important;
+}
+
+#help_box {
+    float: right;
+    width: 600px;
+}
+
+#control_panel {
+    width: 600px;
+}
+
+.align {
+    padding-left: 25px;
+}
+
+#equation {
+    width: 450px;
+}
+
+input {
+    width:150px;
+}
+
+#file_location {
+    width: 200px;
+}
+
+.help_heading {
+    font-size: 18pt;
+    padding-top: 10px;
+}
+
+.help_segment {
+    padding-top: 10px;
+}

@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="logic_editor.css">
+        <link rel="stylesheet" type="text/css" href="logic_editor_print.css" media="print">
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            // MMLorHTML: { prefer: { Firefox: "MML" } }
+          });
+        </script>
+        <script type="text/javascript"
+          src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    </head>
+    <body>
+        <div id="help_box" .class="align">
+                    <div class="help_heading">What does this editor do?</div>
+                    <div class="help_segment">This editor provides a simple way of typesetting propositional and predicate logic proofs. I wrote this editor my freshman year of college to help quickly create great looking proofs for my discrete math and logic classes.</div>
+                    <div class="help_heading">Use Basics:</div>
+                    <div class="help_segment">The input box labeled "Statement to be proved" is where the overall logical statement that the proof is about goes. In the final rendering it appears above the actual proof.</div>
+                    <div class="help_segment">The three columns under the title proof is where the actual editing of the proof occurs. The first column is for the logical statement (or LaTeX expression). The middle column is where the line numbers that were used to justify the current line belong. It is only possible to input numbers into the middle column, each number should be separated by a single space. The last box is where the logical equivalence rule that was used to derive the current line is put.</div>
+                    <div class="help_heading">Key Controls:</div>
+                    <div class="help_segment">Pressing ENTER while inside the editor area inserts a new line under the currently selected line.</div>
+                    <div class="help_segment">Pressing BACKSPACE while inside the first column of the editor when the first box is empty deletes the current line.</div> 
+                    <div class="help_segment">The ARROW KEYS can be used to move around the editor columns and rows.</div>
+                     <div class="help_segment">The TAB key can be used to move from column to column, and on the bottom line can be used to create a new line if it is in the right column.</div>
+                     <div class="help_heading">Creating Logic Statements:</div>
+                     <div class="help_segment">Although the editor accepts direct LaTeX sequences the purpose of the editor was to speed up the process of creating good looking proofs. So the editor has built in symbols it accepts as short hand. They are as follows: </div>
+                     <div class="help_segment">
+                        <table border="1">
+                            <tr><td>Input </td><td>&amp;</td><td>|</td><td>-></td><td>&#60;&#62;</td><td>ex</td><td>all</td><td>~</td><td>xor</td></tr>
+                            <tr><td>Output </td><td>$$\wedge$$</td><td>$$\vee$$</td><td>$$\Rightarrow$$</td><td>$$\iff$$</td><td>$$\exists$$</td><td>$$\forall$$</td><td>$$\lnot$$</td><td>$$\oplus$$</td></tr>
+                        </table>
+                    </div>
+                    <div class="help_heading">Printing, Loading, and Saving:</div>
+                    <div class="help_segment">To print only the proof output use the print button above the proof editor. The normal print key will print the entire page.</div>
+                    <div class="help_segment">Loading and Saving files only works in browsers that support some of the newer HTML5 features. To open a file select the file with the browse button and then click the open button. To save a file click the save button. The file will be saved to your downloads folder, and won't override any existing files of that name due to the limitations of javascript.</div>
+                    <div class="help_heading">Contact me:</div>
+                    <div class="help_segment">Please send any bugs, comments, or suggestions to me at:<div><a href="mailto:contact@chris-lloyd.net">contact@chris-lloyd.net</a></div></div>
+                </div>
+        <div id="content">
+            <div id="header" class="align">Symbolic Proof Editor</div>
+            <div id="sub_header" class="align">
+                <div>Written by <a href="http://chris-lloyd.net/">Chris Lloyd</a></div>
+                <div>LaTeX rendered with <a href="http://www.mathjax.org/">MathJax</a></div>
+            </div>
+            <div id="editor">
+                <div id="control_panel" class="align">
+                    <button id="save_button">Save</button>
+                    <button id="open_button">Open</button>
+                    <button id="print_button">Print</button>
+                    <button id="clear_button">Clear All</button>
+                    <button id="example_button">Show Example</button>
+                    <input type="file" id="file_location"/>
+                </div>
+                <div id="input_area" class="clearfix">
+                    <div class="align">Statement to be proved: </div>
+                    <div class="align"><input id="equation"/></div>
+                    <div class="align">Proof:</div>
+                </div>
+                <div id="output_area">Output Area</div>
+            </div>
+            <script src="logic_editor.js"></script>
+        </div>
+    </body>
+</html>
