@@ -25,6 +25,7 @@ function init_ui() {
     document.getElementById("clear_button").onclick = clear_clicked;
     document.getElementById("example_button").onclick = example_clicked;
     document.getElementById("render_button").onclick = render_latex;
+    document.getElementById("raw_latex").onclick = raw_latex_clicked;
     create_input_line(window.line_count++);
     MathJax.Hub.Queue(["Typeset",MathJax.Hub,"help_box"]);
 }
@@ -160,12 +161,28 @@ function key_down(event) {
 }
 
 function key_up() {
-    if(document.getElementById("auto_render").checked==true)
+    if(document.getElementById("raw_latex").checked == true) 
+        raw_latex_clicked();
+    else if(document.getElementById("auto_render").checked==true)
+        render_latex();
+}
+
+function raw_latex_clicked() {
+    if(document.getElementById("raw_latex").checked == true) 
+        document.getElementById("output_area").innerHTML = make_latex();
+    else
         render_latex();
 }
 
 function render_latex() {
-    var latex = "$$" +  parse_logic(document.getElementById("equation").value) + "$$";
+    document.getElementById("output_area").innerHTML = make_latex();
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"output_area"]);
+}
+
+function make_latex() {
+    var latex = ""
+    if(document.getElementById("equation").value != "")
+        latex += "$$" +  parse_logic(document.getElementById("equation").value) + "$$";
     latex += " \\begin{array}{l l}";
     for(var i = 0; i < window.line_count; i++) {
         var line = get_input_line(i);
@@ -175,8 +192,7 @@ function render_latex() {
         latex += "\\text{" + parse_rules(line,line[2].value)+"}\\\\ ";
     }
     latex += "\\end{array}";
-    document.getElementById("output_area").innerHTML = latex;
-    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"output_area"]);
+    return latex
 }
 
 function parse_logic(s) {
