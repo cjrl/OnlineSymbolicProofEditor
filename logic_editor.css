@@ -75,7 +75,7 @@ input {
     padding-top: 10px;
 }
 
-#auto_render {
+.check_option {
     padding: 0px;
-    width: 0px;
+    width: 10px;
 }
