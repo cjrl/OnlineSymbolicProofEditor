@@ -35,7 +35,7 @@
                     <div class="help_segment">To print only the proof output use the print button above the proof editor. The normal print key will print the entire page.</div>
                     <div class="help_segment">Loading and Saving files only works in browsers that support some of the newer HTML5 features. To open a file select the file with the browse button and then click the open button. To save a file click the save button. The file will be saved to your downloads folder, and won't override any existing files of that name due to the limitations of javascript.</div>
                     <div class="help_heading">Contact me:</div>
-                    <div class="help_segment">Please send any bugs, comments, or suggestions to me at:<div><a href="mailto:contact@chris-lloyd.net">contact@chris-lloyd.net</a></div></div>
+                    <div class="help_segment"><div>This project is on git! <a href="https://github.com/cjrl/OnlineSymbolicProofEditor">Check it out!</a></div><div>Contact me at at <a href="mailto:contact@chris-lloyd.net">contact@chris-lloyd.net</a>.</div></div>
                 </div>
         <div id="content">
             <div id="header" class="align">Symbolic Proof Editor</div>
@@ -53,7 +53,10 @@
                         <button id="render_button">Render</button>
                         <button id="clear_button">Clear All</button>
                         <button id="example_button">Show Example</button>
-                        <label><input id="auto_render" checked="true" type="checkbox">Auto Render (slows down editing)</label>
+                    </div>
+                    <div>
+                        <label><input class="check_option" id="auto_render" checked="true" type="checkbox">Auto Render (slows down editing)</label>
+                        <label><input class="check_option" id="raw_latex" defaultChecked="false" type="checkbox">Display Raw LaTeX</label>
                     </div>
                 </div>
                 <div id="input_area" class="clearfix">
