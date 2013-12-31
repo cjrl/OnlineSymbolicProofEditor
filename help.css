@@ -1,0 +1,11 @@
+#content #help_box {
+    clear: both;
+}
+.help_heading {
+    font-size: 18pt;
+    padding-top: 10px;
+}
+
+.help_segment {
+    padding-top: 10px;
+}
