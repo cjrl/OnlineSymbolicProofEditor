@@ -31,8 +31,8 @@ function init_ui() {
 }
 
 function clear_clicked() {
+    document.getElementById("equation").value = "";
     remove_all_lines();
-    document.getElementById("equation").value ="";
 }
 
 function example_clicked() {
