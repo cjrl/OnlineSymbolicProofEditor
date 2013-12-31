@@ -5,6 +5,7 @@
 
 #content {
     width: 100%;
+    min-width: 1000px;
 }
 
 #header {
@@ -18,6 +19,7 @@
 #content #input_area {
     float: left;
     width: 500px;
+    min-width: 500px;
     height: 200px;
 }
 
@@ -35,19 +37,14 @@
 }
 
 #content #output_area {
-    float: left;
     width:500px;
-    height: 200px;
+    margin-left: 500px;
+    min-width: 500px;
     text-align: left !important;
 }
 
-#help_box {
-    float: right;
-    width: 600px;
-}
-
 #control_panel {
-    width: 600px;
+    width: 1000px;
 }
 
 .align {
@@ -65,6 +62,8 @@ input {
 #file_location {
     width: 200px;
 }
+<<<<<<< HEAD
+=======
 
 .help_heading {
     font-size: 18pt;
@@ -75,6 +74,7 @@ input {
     padding-top: 10px;
 }
 
+>>>>>>> 4b87942d56f9efb188ee9a7add5b49c8a41e4f77
 .check_option {
     padding: 0px;
     width: 10px;
